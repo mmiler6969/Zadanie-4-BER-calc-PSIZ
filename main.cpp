@@ -40,3 +40,13 @@ struct berResults
     clock_t t2; //calc stop time
 };
 
+std::fstream logFile;
+uint8_t hammingDistance(uint8_t n1, uint8_t n2);
+void createFile1(const std::string name, const int count, const char value);
+berResults calculateBer(std::string fpath1, std::string fpath2);
+void printResult(berResults results);
+
+int main(int argc, char * argv[])
+{
+        return 0;
+}
