@@ -48,6 +48,35 @@ void printResult(berResults results);
 
 int main(int argc, char * argv[])
 {
+      std::string fpath1;
+    std::string fpath2;
+
+    std::cout << fpath2;
+
+    berResults results;
+
+    if (argc != 3)
+    {
+        log("Tworzenie testowych plikow");
+        //createFile1("t1file1.bin", 100, 0x55);
+        //createFile1("t1file2.bin", 100, 0x55);
+
+        //createFile1("t2file1.bin", 100, 0x55);
+        //createFile1("t2file2.bin", 90, 0x55);
+
+        //createFile1("t3file1.bin", 400000000, 0x50);
+        //createFile1("t3file2.bin", 400000000, 0x50);
+        log("Pliki testowe zostaly stworzone");
+    }
+    else
+    {
+        std::cout << "tutaj";
+        fpath1 = argv[1];
+        fpath2 = argv[2];
+        log("Test");
+        results = calculateBer(fpath1, fpath2);
+        printResult(results);
+    }
         return 0;
 }
 uint8_t hammingDistance(uint8_t n1, uint8_t n2)
