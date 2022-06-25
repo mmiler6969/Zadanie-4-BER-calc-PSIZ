@@ -31,3 +31,12 @@ void saveLog(std::string msg)
     std::cout << ss.c_str();
     std::cout.flush();
 }
+struct berResults
+{
+    double tot; //total number of bits
+    double err; //error bits (different bits)
+    float ber;  //ber calc result
+    clock_t t1; //calc start time
+    clock_t t2; //calc stop time
+};
+
